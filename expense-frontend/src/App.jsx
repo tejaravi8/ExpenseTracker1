@@ -5,7 +5,7 @@ import AddExpense from "./components/AddExpense";
 import SplitBill from "./components/SplitBill";
 import MonthlyChart from "./components/MonthlyChart";
 import CategoryChart from "./components/CategoryChart";
-import Login from "./components/login";
+import Login from "./components/Login";
 import Signup from "./components/Signup";
 
 import { useEffect, useState } from "react";
