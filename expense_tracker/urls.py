@@ -34,7 +34,5 @@ urlpatterns = [
     re_path(r'^.*$', TemplateView.as_view(template_name='index.html')),
 
 ]
-urlpatterns += static(
-    '/assets/',
-    document_root=os.path.join(settings.BASE_DIR, 'dist/assets')
-)
+
+urlpatterns += static(settings.STATIC_URL, document_root=os.path.join(settings.BASE_DIR, 'dist/assets'))
