@@ -17,7 +17,7 @@ function Signup({ setIsAuthenticated }) {
     }
 
     try {
-      const res = await fetch("http://127.0.0.1:8000/api/register/", {
+      const res = await fetch("https://expensetracker1-9ulr.onrender.com/api/register/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
@@ -90,7 +90,7 @@ function Signup({ setIsAuthenticated }) {
               onSuccess={async (res) => {
                 const token = res.credential;
 
-                const response = await fetch("http://127.0.0.1:8000/api/google-login/", {
+                const response = await fetch("https://expensetracker1-9ulr.onrender.com/api/google-login/", {
                   method: "POST",
                   headers: {
                     "Content-Type": "application/json"

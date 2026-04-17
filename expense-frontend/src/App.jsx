@@ -20,7 +20,7 @@ function App() {
   const fetchExpenses = () => {
     const token = localStorage.getItem("access");
 
-    fetch("http://127.0.0.1:8000/api/expenses/", {
+    fetch("https://expensetracker1-9ulr.onrender.com//api/expenses/", {
       headers: {
         "Content-Type": "application/json",
         "Authorization": `Bearer ${token}`,
