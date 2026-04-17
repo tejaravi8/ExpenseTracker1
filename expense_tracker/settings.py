@@ -76,6 +76,9 @@ TEMPLATES = [
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'build/static')
 ]
+
+print(os.path.join(BASE_DIR, 'build'))
+
 WSGI_APPLICATION = 'expense_tracker.wsgi.application'
 
 
