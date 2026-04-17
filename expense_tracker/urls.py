@@ -31,8 +31,18 @@ urlpatterns = [
     path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
     # path('', TemplateView.as_view(template_name='index.html')),
-    re_path(r'^.*$', TemplateView.as_view(template_name='index.html')),
+    # re_path(r'^.*$', TemplateView.as_view(template_name='index.html')),
 
 ]
 
-urlpatterns += static(settings.STATIC_URL, document_root=os.path.join(settings.BASE_DIR, 'dist/assets'))
+# ✅ Serve static files FIRST
+urlpatterns += static(
+    settings.STATIC_URL,
+    document_root=os.path.join(settings.BASE_DIR, 'dist/assets')
+)
+
+
+# ✅ THEN React catch-all (VERY IMPORTANT ORDER)
+urlpatterns += [
+    re_path(r'^.*$', TemplateView.as_view(template_name='index.html')),
+]
