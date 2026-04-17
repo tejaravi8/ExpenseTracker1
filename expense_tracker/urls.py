@@ -36,10 +36,10 @@ urlpatterns = [
 ]
 
 # ✅ Serve static files FIRST
-urlpatterns += static(
-    settings.STATIC_URL,
-    document_root=os.path.join(settings.BASE_DIR, 'dist/assets')
-)
+# urlpatterns += static(
+#     settings.STATIC_URL,
+#     document_root=os.path.join(settings.BASE_DIR, 'dist/assets')
+# )
 
 
 # ✅ THEN React catch-all (VERY IMPORTANT ORDER)
